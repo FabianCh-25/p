@@ -1,0 +1,41 @@
+<h1>Lista de Calificacion de Trainers EnergyPassion</h1>
+
+<table mat-table [dataSource]= "dataSource" class= "mat-elevation-z8">
+    
+    
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="calificacion">
+        <th mat-header-cell *matHeaderCellDef> Calificacion </th> 
+        <td mat-cell *matCellDef="let element"> {{element?.calificacion}} </td>
+    </ng-container>
+    
+     
+
+
+    
+    
+        <ng-container matColumnDef="idTrainer">
+            <th mat-header-cell *matHeaderCellDef> idTrainer  </th>
+            <td mat-cell *matCellDef="let element"> {{element?.idTrainer}} </td>
+        </ng-container>
+   
+  
+ 
+
+    <ng-container matColumnDef="symbol">
+
+        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    
+        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    
+      </ng-container>
+    
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+        
